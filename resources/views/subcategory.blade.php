@@ -251,6 +251,11 @@
             }
         })
 
+        $('#modals-slide-in').on('click',function(){
+            $(this).closest('form').find("input[type=text], input[type=file],input[type=hidden],input[type=number]").val("");
+            $('#img').html('');
+        });
+
         $(document).on('click','.subcatid',function(e){
             const myElement = document.getElementById("img");
               myElement.style.display = "block";

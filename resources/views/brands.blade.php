@@ -241,6 +241,8 @@
 
     <script>
         $(window).on('load', function() {
+            const myElement = document.getElementById("img");
+              myElement.style.display = "none";
             if (feather) {
                 feather.replace({
                     width: 18,
@@ -248,7 +250,13 @@
                 });
             }
         })
+        $('#modals-slide-in').on('click',function(){
+            $(this).closest('form').find("input[type=text], input[type=file],input[type=hidden],").val("");
+            $('#img').html('');
+        });
         $(document).on('click','.brandid',function(e){
+            const myElement = document.getElementById("img");
+            myElement.style.display = "block";
             var brandid = $(this).attr('data-id');
             // alert(brandid);
             $('#modals-slide-in').modal('show');

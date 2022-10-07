@@ -39,3 +39,17 @@ Route::get('unbrandarch/{id}',[AdminController::class,'unbrandarch']);
 Route::get('cat-data/{id}',[AdminController::class,'catdata']);
 Route::get('subcat-data/{id}',[AdminController::class,'subcatdata']);
 Route::get('brand-data/{id}',[AdminController::class,'branddata']);
+Route::get('price-range',[AdminController::class,'pricerange']);
+Route::get('/employees',[AdminController::class,'employees']);
+Route::get('/category-tracking',[AdminController::class,'categorytrack']);
+Route::post('/range-submit',[AdminController::class,'addrange']);
+Route::get('/get-range/{id}',[AdminController::class,'getrange']);
+
+Route::get('pricerangearch/{id}',[AdminController::class,'pricerangearch']);
+Route::get('unpricerangearch/{id}',[AdminController::class,'unpricerangearch']);
+
+Route::get('users',[AdminController::class,'allusers']);
+Route::get('/usersdata',[AdminController::class,'usersdata']);
+
+Route::get('/display-users/{id}',[AdminController::class,'displayusers']);
+Route::get('/user-display/{id}',[AdminController::class, 'userdisplay']);

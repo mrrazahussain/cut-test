@@ -26,8 +26,9 @@ return new class extends Migration
             $table->string('laborcontract')->nullable();
             $table->string('emiratesid')->nullable();
             $table->string('passport')->nullable();
-            $table->tinyInteger('role')->nullable();
-            $table->rememberToken();
+            $table->integer('status')->nullable();
+            $table->unsignedBigInteger('role');
+            $table->foreign('role')->references('role_key')->on('roles');
             $table->timestamps();
         });
     }

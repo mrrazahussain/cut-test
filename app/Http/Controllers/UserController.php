@@ -42,6 +42,7 @@ class UserController extends Controller
       $users->password=Hash::make($request->password);
       $users->address=$request->password;
       $users->role=$request->role;
+      $users->status=$request->status;
       $users->save();
     }
 

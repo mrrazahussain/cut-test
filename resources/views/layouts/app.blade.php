@@ -60,7 +60,7 @@
                 </ul>
             </div>
             <ul class="nav navbar-nav align-items-center ms-auto">
-                <li class="nav-item dropdown dropdown-language"><a class="nav-link dropdown-toggle" id="dropdown-flag"
+                {{-- <li class="nav-item dropdown dropdown-language"><a class="nav-link dropdown-toggle" id="dropdown-flag"
                         href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                             class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-flag"><a
@@ -69,7 +69,7 @@
                                 class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="#"
                             data-language="de"><i class="flag-icon flag-icon-de"></i> German</a><a class="dropdown-item"
                             href="#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></div>
-                </li>
+                </li> --}}
                 <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon"
                             data-feather="moon"></i></a></li>
                 <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#"
@@ -363,9 +363,14 @@
                                 data-i18n="Advanced">Sub Category</span></a>
                     </li>
 
-                    <li><a class="d-flex align-items-center" href="Price-range.html"><i
+                    <li><a class="d-flex align-items-center" href="/price-range"><i
                                 data-feather="circle"></i><span class="menu-item text-truncate"
                                 data-i18n="Basic">Price Range</span></a>
+                    </li>
+
+                    <li><a class="d-flex align-items-center" href="#"><i
+                        data-feather="circle"></i><span class="menu-item text-truncate"
+                        data-i18n="Basic">Product Group</span></a>
                     </li>
 
                     <li><a class="d-flex align-items-center" href="/brands"><i
@@ -390,7 +395,7 @@
             <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span
                         class="menu-title text-truncate" data-i18n="User">User</span></a>
                 <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="app-user-list.html"><i
+                    <li><a class="d-flex align-items-center" href="/users"><i
                                 data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">All
                                 User</span></a>
                     </li>
@@ -409,11 +414,15 @@
             </li>
 
 
-            <li class=" nav-item"><a class="d-flex align-items-center" href="feedback.html"><i
+            <li class=" nav-item"><a class="d-flex align-items-center" href="/employees"><i
                         data-feather="square"></i><span class="menu-title text-truncate"
-                        data-i18n="Modal Examples">Reviews</span></a>
+                        data-i18n="Modal Examples">Employees</span></a>
             </li>
 
+            <li class=" nav-item"><a class="d-flex align-items-center" href="category-tracking"><i
+                data-feather="square"></i><span class="menu-title text-truncate"
+                data-i18n="Modal Examples">Category Tracking</span></a>
+            </li>
 
             <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i
                         data-feather="file-text"></i><span class="menu-title text-truncate"

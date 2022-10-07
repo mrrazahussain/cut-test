@@ -12,10 +12,8 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Eloquent implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
+class Role extends Eloquent implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword,HasApiTokens;
-//    public function role(){
-//     return $this->belongsTo(Role::class,'role','role_key');
-//    }
+
 }

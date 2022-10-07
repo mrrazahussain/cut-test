@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Subcategory;
 use App\Models\Brand;
+use App\Models\Pricerange;
+use App\Models\User;
+use App\Models\Role;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -14,15 +18,15 @@ class AdminController extends Controller
         return view('category',compact('categorydata'));
     }
     public function addcategory(Request $request){
-        $cat = Category:: where('order_number',$request->order_number)->first();
         $validated = $request->validate([
             'category_name' => 'required',
             'category_icon' => 'required',
             'order_number' => 'required',
         ]);
-        if($request->order_number == $cat->order_number){
+        $cat = Category::where('order_number',$request->order_number)->first();
+        if($cat) {
             $category = Category::where('order_number',$request->order_number)->first();
-            if($request->file('category_icon')){
+            if( $request->file('category_icon') ) {
                 $file= $request->file('category_icon');
                 $filename= date('YmdHi').$file->getClientOriginalName();
                 $file-> move(public_path('images/categories'), $filename);
@@ -33,22 +37,21 @@ class AdminController extends Controller
                $category->status = $request->status;
                $category->update();
                return redirect()->back();
+        } else {
+            $category = new Category;
+            if( $request->file('category_icon') ) {
+                $file= $request->file('category_icon');
+                $filename= date('YmdHi').$file->getClientOriginalName();
+                $file-> move(public_path('images/categories'), $filename);
+                $category['category_icon'] = $filename;
+            }
+            $category->category_name = $request->category_name;
+            $category->order_number = $request->order_number;
+            $category->status = $request->status;
+            $category->save();
+            return redirect()->back();
         }
-        else{
-       $category = new Category;
-       if($request->file('category_icon')){
-        $file= $request->file('category_icon');
-        $filename= date('YmdHi').$file->getClientOriginalName();
-        $file-> move(public_path('images/categories'), $filename);
-        $category['category_icon'] = $filename;
     }
-       $category->category_name = $request->category_name;
-       $category->order_number = $request->order_number;
-       $category->status = $request->status;
-       $category->save();
-       return redirect()->back();
-    }
-}
     public function subcategory(){
         $category = Category::all();
         $subcategory = Subcategory::with('category')->get();
@@ -56,14 +59,15 @@ class AdminController extends Controller
     }
 
     public function addsubcategory(Request $request){
-        $subcat = Category:: where('order_number',$request->order_number)->first();
         $validated = $request->validate([
             'category_id' => 'required',
             'sub_cat_icon' => 'required',
             'sub_cat_name' => 'required',
             'order_number' => 'required',
         ]);
-        if($request->order_number == $subcat->order_number){
+        $subcategory = Subcategory::where('order_number',$request->order_number)->first();
+
+        if($subcategory){
             $subcategory = Subcategory::where('order_number',$request->order_number)->first();
             if($request->file('sub_cat_icon')){
                 $file= $request->file('sub_cat_icon');
@@ -103,13 +107,14 @@ class AdminController extends Controller
         return view('brands',compact('brands'));
     }
     public function addbrands(Request $request){
-        $brands = Brand:: where('order_number',$request->order_number)->first();
         $validated = $request->validate([
             'brand_name' => 'required',
             'brand_icon' => 'required',
             'order_number' => 'required',
         ]);
-        if($request->order_number == $brands->order_number){
+        $brands = Brand:: where('order_number',$request->order_number)->first();
+
+        if($brands){
             $brand = Brand::where('order_number',$request->order_number)->first();
             if($request->file('brand_icon')){
                 $file= $request->file('brand_icon');
@@ -211,6 +216,110 @@ class AdminController extends Controller
             'brand' => $brand,
         ]);
     }
+
+    public function pricerange(){
+        $pricerange = Pricerange::all();
+        return view('price-range',compact('pricerange'));
+    }
+
+    public function employees(){
+        $employees = User::where('role','!=',1)->where('role','!=',2)->get();
+        return view('employees',compact('employees'));
+    }
+
+    public function categorytrack(){
+        return view('category-tracking');
+    }
+
+    public function addrange(Request $request){
+        $validated = $request->validate([
+            'price_range_name' => 'required',
+            'order_number' => 'required',
+            'range_minimum' => 'required',
+            'range_maximum' => 'required',
+
+        ]);
+        $price = Pricerange::where('order_number',$request->order_number)->first();
+        if($price){
+       $pricerange = Pricerange::where('order_number',$request->order_number)->first();
+       $pricerange->price_range_name = $request->price_range_name;
+       $pricerange->order_number = $request->order_number;
+       $pricerange->range_minimum = $request->range_minimum;
+       $pricerange->range_maximum = $request->range_maximum;
+       $pricerange->status = $request->status;
+       $pricerange->update();
+       return redirect()->back();
+        }
+       $pricerange = new Pricerange;
+       $pricerange->price_range_name = $request->price_range_name;
+       $pricerange->order_number = $request->order_number;
+       $pricerange->range_minimum = $request->range_minimum;
+       $pricerange->range_maximum = $request->range_maximum;
+       $pricerange->status = $request->status;
+       $pricerange->save();
+       return redirect()->back();
+
+
+    }
+
+    public function getrange($id){
+        $range = Pricerange::find($id);
+        return response()->json([
+            'status' => 200,
+            'range' => $range,
+        ]);
+
+    }
+
+    public function pricerangearch($id){
+        $pricerange = Pricerange::find($id);
+        $pricerange->status = 0;
+        $pricerange->update();
+        return redirect()->back();
+    }
+
+    public function unpricerangearch($id){
+        $pricerange = Pricerange::find($id);
+        $pricerange->status = 1;
+        $pricerange->update();
+        return redirect()->back();
+    }
+
+    public function allusers(){
+       $roles = Role::all();
+       return view('users',compact('roles'));
+    }
+
+    public function usersdata(){
+        //  $users = User::where('role', '!=', 0)->get();
+         $users = User::where('status',0)->get();
+        // $users = User::with('role')->get();
+        return response()->json([
+            'status' => 200,
+            'users' => $users ,
+        ]);
+    }
+
+    public function displayusers($id){
+       $v_id = (int)$id;
+         $users = User::where('role',$v_id)->get();
+        //  dd($users);
+         return response()->json([
+            'status' => 200,
+            'users' => $users ,
+        ]);
+    }
+
+    public function userdisplay($id){
+        $v_id = (int)$id;
+        $users = User::where('status',$v_id)->get();
+        return response()->json([
+            'status' => 200,
+            'users' => $users ,
+        ]);
+    }
+
+
 
 
 }
