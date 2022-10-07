@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>How cut works - Vuexy - Bootstrap HTML admin template</title>
+    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+    <!-- BEGIN: Page CSS-->
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/editors/quill/katex.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/editors/quill/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/editors/quill/quill.bubble.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inconsolata&amp;family=Roboto+Slab&amp;family=Slabo+27px&amp;family=Sofia&amp;family=Ubuntu+Mono&amp;display=swap">
+    <!-- END: Vendor CSS-->
+
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/page-blog.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern content-detached-right-sidebar navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="content-detached-right-sidebar">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
+        <div class="navbar-container d-flex content">
+            <div class="bookmark-wrapper d-flex align-items-center">
+                <ul class="nav navbar-nav d-xl-none">
+                    <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon"
+                                data-feather="menu"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav bookmark-icons">
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Email"><i class="ficon"
+                                data-feather="mail"></i></a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-chat.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chat"><i class="ficon"
+                                data-feather="message-square"></i></a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calendar.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Calendar"><i class="ficon"
+                                data-feather="calendar"></i></a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Todo"><i class="ficon"
+                                data-feather="check-square"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i
+                                class="ficon text-warning" data-feather="star"></i></a>
+                        <div class="bookmark-input search-input">
+                            <div class="bookmark-input-icon"><i data-feather="search"></i></div>
+                            <input class="form-control input" type="text" placeholder="Bookmark" tabindex="0" data-search="search">
+                            <ul class="search-list search-list-bookmark"></ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav align-items-center ms-auto">
+                <li class="nav-item dropdown dropdown-language"><a class="nav-link dropdown-toggle" id="dropdown-flag" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                            class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i>
+                            English</a><a class="dropdown-item" href="#" data-language="fr"><i
+                                class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></div>
+                </li>
+                <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon"
+                            data-feather="moon"></i></a></li>
+                <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span
+                            class="badge rounded-pill bg-danger badge-up">5</span></a>
+                    <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
+                        <li class="dropdown-menu-header">
+                            <div class="dropdown-header d-flex">
+                                <h4 class="notification-title mb-0 me-auto">Notifications</h4>
+                                <div class="badge rounded-pill badge-light-primary">6 New</div>
+                            </div>
+                        </li>
+                        <li class="scrollable-container media-list">
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar"><img src="../../../app-assets/images/portrait/small/avatar-s-15.jpg" alt="avatar" width="32" height="32"></div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Congratulation Sam
+                                                🎉</span>winner!</p><small class="notification-text"> Won the monthly
+                                            best seller badge.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar"><img src="../../../app-assets/images/portrait/small/avatar-s-3.jpg" alt="avatar" width="32" height="32"></div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">New
+                                                message</span>&nbsp;received</p><small class="notification-text"> You
+                                            have 10 unread messages</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-danger">
+                                            <div class="avatar-content">MD</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Revised Order
+                                                👋</span>&nbsp;checkout</p><small class="notification-text"> MD Inc.
+                                            order updated</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="list-item d-flex align-items-center">
+                                <h6 class="fw-bolder me-auto mb-0">System Notifications</h6>
+                                <div class="form-check form-check-primary form-switch">
+                                    <input class="form-check-input" id="systemNotification" type="checkbox" checked="">
+                                    <label class="form-check-label" for="systemNotification"></label>
+                                </div>
+                            </div>
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-danger">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Server
+                                                down</span>&nbsp;registered</p><small class="notification-text"> USA
+                                            Server is down due to high CPU usage</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-success">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Sales
+                                                report</span>&nbsp;generated</p><small class="notification-text"> Last
+                                            month sales report generated</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-warning">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="alert-triangle"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">High memory</span>&nbsp;usage
+                                        </p><small class="notification-text"> BLR Server using high memory</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">Read all
+                                notifications</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown dropdown-user">
+                    <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">John Doe</span><span class="user-status">Admin</span></div><span class="avatar"><img class="round"
+                                src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40"
+                                width="40"><span class="avatar-status-online"></span></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user"><a class="dropdown-item" href="page-profile.html"><i class="me-50" data-feather="user"></i>
+                            Profile</a><a class="dropdown-item" href="app-chat.html"><i class="me-50"
+                                data-feather="message-square"></i> Chats</a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="page-account-settings-account.html"><i class="me-50" data-feather="settings"></i>
+                            Settings</a><a class="dropdown-item" href="page-pricing.html"><i class="me-50"
+                                data-feather="credit-card"></i> Pricing</a><a class="dropdown-item" href="page-faq.html"><i class="me-50" data-feather="help-circle"></i> FAQ</a><a class="dropdown-item" href="auth-login-cover.html"><i class="me-50"
+                                data-feather="power"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="main-search-list-defaultlist d-none">
+        <li class="d-flex align-items-center">
+            <a href="#">
+                <h6 class="section-label mt-75 mb-0">Files</h6>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="../../../app-assets/images/icons/xls.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing
+                            Manager</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;17kb</small>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="../../../app-assets/images/icons/jpg.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd
+                            Developer</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;11kb</small>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="../../../app-assets/images/icons/pdf.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital
+                            Marketing Manager</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;150kb</small>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="../../../app-assets/images/icons/doc.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web
+                            Designer</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;256kb</small>
+            </a>
+        </li>
+        <li class="d-flex align-items-center">
+            <a href="#">
+                <h6 class="section-label mt-75 mb-0">Members</h6>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="../../../app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd
+                            Developer</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="../../../app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing
+                            Manager</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="../../../app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="main-search-list-defaultlist-other-list d-none">
+        <li class="auto-suggestion justify-content-between">
+            <a class="d-flex align-items-center justify-content-between w-100 py-50">
+                <div class="d-flex justify-content-start"><span class="me-75" data-feather="alert-circle"></span><span>No results found.</span></div>
+            </a>
+        </li>
+    </ul>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item me-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html"><span class="brand-logo">
+                            <img style="max-width: 75px;" src="../../../app-assets/images/portrait/small/logo.png"
+                                alt="">
+
+                    </a></li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i
+                            class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
+                            class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary"
+                            data-feather="disc" data-ticon="disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item"><a class="d-flex align-items-center" href="dashboard-analytics.html"><i
+                    data-feather="home"></i><span class="menu-title text-truncate"
+                    data-i18n="Dashboards">Dashboards</span></a>
+                </li>
+                <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Apps &amp; Pages</span><i data-feather="more-horizontal"></i>
+                </li>
+
+                <li class=" nav-item"><a class="d-flex align-items-center" href="app-chat.html"><i
+                            data-feather="message-square"></i><span class="menu-title text-truncate"
+                            data-i18n="Chat">Chat</span></a>
+                </li>
+
+                <!-- <li class=" nav-item"><a class="d-flex align-items-center" href="Terms-of-services.html"><i
+                            data-feather="grid"></i><span class="menu-title text-truncate"
+                            data-i18n="Term-of-services">Terms of Services</span></a>
+                </li>
+                <li class=""><a class="d-flex align-items-center" href="how-cut-works.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Quill Editor">How Cut Works</span></a>
+                </li> -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span
+                            class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Roles &amp;
+                            Permission</span></a>
+                    <ul class="menu-content">
+                        <li><a class="d-flex align-items-center" href="app-access-roles.html"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Roles">Roles</span></a>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="app-access-permission.html"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Permission">Permission</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span
+                            class="menu-title text-truncate" data-i18n="User">User</span></a>
+                    <ul class="menu-content">
+                        <li><a class="d-flex align-items-center" href="app-user-list.html"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="List">List</span></a>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
+                                    class="menu-item text-truncate" data-i18n="View">View</span></a>
+                            <ul class="menu-content">
+                                <li><a class="d-flex align-items-center" href="app-user-view-account.html"><span
+                                            class="menu-item text-truncate" data-i18n="Account">Account</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="app-user-view-security.html"><span
+                                            class="menu-item text-truncate" data-i18n="Security">Security</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i
+                            data-feather="file-text"></i><span class="menu-title text-truncate"
+                            data-i18n="Pages">Setting</span></a>
+                    <ul class="menu-content">
+                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
+                                    class="menu-item text-truncate" data-i18n="Account Settings">Account
+                                    Settings</span></a>
+                            <ul class="menu-content">
+                                <li><a class="d-flex align-items-center" href="page-account-settings-account.html"><span
+                                            class="menu-item text-truncate" data-i18n="Account">Account</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="page-account-settings-security.html"><span class="menu-item text-truncate"
+                                            data-i18n="Security">Security</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="page-profile.html"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Profile">Profile</span></a>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="page-faq.html"><i data-feather="circle"></i><span
+                                    class="menu-item text-truncate" data-i18n="FAQ">FAQ</span></a>
+                        </li>
+
+                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
+                                    class="menu-item text-truncate" data-i18n="Blog">Pages</span></a>
+                            <ul class="menu-content">
+                                <li><a class="d-flex align-items-center" href="page-blog-list.html"><span
+                                            class="menu-item text-truncate" data-i18n="List">List</span></a>
+                                </li>
+                                <li class="active"><a class="d-flex align-items-center" href="how-cut-works.html"><span
+                                            class="menu-item text-truncate" data-i18n="Detail">How Cut Works</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="Terms-of-services.html"><span
+                                            class="menu-item text-truncate" data-i18n="Edit">Terms of Services</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span
+                                    class="menu-item text-truncate" data-i18n="Mail Template">Mail Template</span></a>
+                            <ul class="menu-content">
+                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-welcome.html" target="_blank"><span class="menu-item text-truncate"
+                                            data-i18n="Welcome">Welcome</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-reset-password.html" target="_blank"><span class="menu-item text-truncate"
+                                            data-i18n="Reset Password">Reset Password</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-verify-email.html" target="_blank"><span class="menu-item text-truncate"
+                                            data-i18n="Verify Email">Verify Email</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-deactivate-account.html" target="_blank"><span class="menu-item text-truncate"
+                                            data-i18n="Deactivate Account">Deactivate Account</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-invoice.html" target="_blank"><span class="menu-item text-truncate"
+                                            data-i18n="Invoice">Invoice</span></a>
+                                </li>
+                                <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-promotional.html" target="_blank"><span class="menu-item text-truncate"
+                                            data-i18n="Promotional">Promotional</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class=" nav-item"><a class="d-flex align-items-center" href="feedback.html"><i
+                            data-feather="square"></i><span class="menu-title text-truncate"
+                            data-i18n="Modal Examples">Feedback</span></a>
+                </li>
+                <li class=" navigation-header"><span data-i18n="User Interface">User Interface</span><i data-feather="more-horizontal"></i>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="contact-us.html"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M384 0H96C60.65 0 32 28.65 32 64v384c0 35.35 28.65 64 64 64h288c35.35 0 64-28.65 64-64V64C448 28.65 419.3 0 384 0zM240 128c35.35 0 64 28.65 64 64s-28.65 64-64 64c-35.34 0-64-28.65-64-64S204.7 128 240 128zM336 384h-192C135.2 384 128 376.8 128 368C128 323.8 163.8 288 208 288h64c44.18 0 80 35.82 80 80C352 376.8 344.8 384 336 384zM496 64H480v96h16C504.8 160 512 152.8 512 144v-64C512 71.16 504.8 64 496 64zM496 192H480v96h16C504.8 288 512 280.8 512 272v-64C512 199.2 504.8 192 496 192zM496 320H480v96h16c8.836 0 16-7.164 16-16v-64C512 327.2 504.8 320 496 320z" />
+                        </svg><span class="menu-title text-truncate" data-i18n="Contact Us">Contact Us</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="grid"></i><span
+                            class="menu-title text-truncate" data-i18n="Datatable">Categories</span></a>
+                    <ul class="menu-content">
+                        <li class=""><a class="d-flex align-items-center" href="Price-range.html"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Basic">Price Range</span></a>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="product-group.html"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Advanced">Product Group</span></a>
+                        </li>
+
+                        <li class=""><a class="d-flex align-items-center" href="category-brands.html"><i
+                            data-feather="circle"></i><span class="menu-item text-truncate"
+                            data-i18n="Advanced">Brands</span></a>
+                </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-start mb-0">How Cut Works</h2>
+                            <div class="breadcrumb-wrapper">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="dashboard-analytics.html">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">Setting</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">Blog</a>
+                                    </li>
+                                    <li class="breadcrumb-item ">How Cut Works
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-detached content-left">
+                <div class="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit blanditiis expedita laborum, adipisci eos ipsum natus obcaecati perferendis recusandae repellendus amet omnis et repellat quod aut magnam molestiae ratione placeat.
+                        Vel quibusdam voluptatibus, cum, vitae id possimus ratione provident rem placeat repellat beatae voluptas exercitationem fugiat voluptatum natus expedita esse eligendi nam. Fugit quod sint ab vero deserunt vel repudiandae. Harum
+                        laboriosam est quod cumque doloribus voluptatibus unde facere nihil ratione, enim earum. Dicta non vitae, quas ab dolore distinctio illum quaerat odit debitis atque, blanditiis repellat molestias totam ipsam? Beatae sit quia veritatis
+                        et quas unde dignissimos? Eius qui consequatur nisi vel ut corporis odio expedita dignissimos harum incidunt? Qui vel veniam ullam ipsam? Temporibus maiores porro asperiores fugit. <br> Quidem voluptates exercitationem enim nemo
+                        sint, voluptate reprehenderit sit ab dignissimos obcaecati, fugit libero ducimus officia. Ipsa debitis nostrum reiciendis perspiciatis voluptates modi commodi nulla quam! Delectus alias animi sunt! Laudantium rem, ipsa dolores
+                        voluptate maxime reprehenderit veniam ipsam et, earum incidunt praesentium aperiam fugit error nobis sed perspiciatis ex ullam facilis ab doloremque provident voluptatum omnis excepturi! Sequi, officiis. <br> Sequi aperiam voluptas
+                        cum. Exercitationem eius aliquid eos, itaque temporibus, laborum magnam dignissimos repudiandae ex perspiciatis magni ratione libero culpa consectetur blanditiis! Minus earum commodi quas facere sed quae voluptates. Quibusdam blanditiis
+                        nostrum necessitatibus eaque possimus a officiis ipsa, temporibus provident! Natus tenetur dolorum voluptatum odio, vitae eum minima dignissimos quos ducimus, doloribus hic, blanditiis nostrum possimus porro nisi perferendis! <br>                        Cumque accusantium a incidunt consectetur unde porro quibusdam. Sunt, ea ipsam cupiditate id aspernatur corporis magni, a consequuntur deleniti, ratione voluptatibus pariatur commodi assumenda voluptatem quos similique? Reiciendis,
+                        iure sit? Consequuntur aspernatur, quis recusandae soluta eius, ullam facilis eum quisquam quasi, alias culpa consequatur doloremque sed? Blanditiis veniam delectus aliquam id totam accusamus labore at pariatur, ab corrupti quis
+                        voluptates.2
+                    </p>
+
+                    <!-- Snow Editor start -->
+                    <section class="snow-editor">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Snow Editor</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div id="snow-wrapper">
+                                                    <div id="snow-container">
+                                                        <div class="quill-toolbar">
+                                                            <span class="ql-formats">
+                                            <select class="ql-header">
+                                                <option value="1">Heading</option>
+                                                <option value="2">Subheading</option>
+                                                <option selected>Normal</option>
+                                            </select>
+                                            <select class="ql-font">
+                                                <option selected>Sailec Light</option>
+                                                <option value="sofia">Sofia Pro</option>
+                                                <option value="slabo">Slabo 27px</option>
+                                                <option value="roboto">Roboto Slab</option>
+                                                <option value="inconsolata">Inconsolata
+                                                </option>
+                                                <option value="ubuntu">Ubuntu Mono</option>
+                                            </select>
+                                        </span>
+                                                            <span class="ql-formats">
+                                            <button class="ql-bold"></button>
+                                            <button class="ql-italic"></button>
+                                            <button class="ql-underline"></button>
+                                        </span>
+                                                            <span class="ql-formats">
+                                            <button class="ql-list" value="ordered"></button>
+                                            <button class="ql-list" value="bullet"></button>
+                                        </span>
+                                                            <span class="ql-formats">
+                                            <button class="ql-link"></button>
+                                            <button class="ql-image"></button>
+                                            <button class="ql-video"></button>
+                                        </span>
+                                                            <span class="ql-formats">
+                                            <button class="ql-formula"></button>
+                                            <button class="ql-code-block"></button>
+                                        </span>
+                                                            <span class="ql-formats">
+                                            <button class="ql-clean"></button>
+                                        </span>
+                                                        </div>
+                                                        <div class="editor">
+                                                            <h1 class="ql-align-center">Quill Rich Text Editor
+                                                            </h1>
+                                                            <p class="card-text"><br /></p>
+                                                            <p class="card-text">
+                                                                Quill is a free, <a href="https://github.com/quilljs/quill/">open
+                                                source</a> WYSIWYG editor built for the modern web. With its
+                                                                <a href="http://quilljs.com/docs/modules/">modular
+                                                architecture</a> and expressive
+                                                                <a href="http://quilljs.com/docs/api/">API</a>, it is completely customizable to fit any need.
+                                                            </p>
+                                                            <p class="card-text"><br /></p>
+                                                            <iframe class="ql-video ql-align-center" src="https://www.youtube.com/embed/QHH3iSeDBLo?showinfo=0" width="560" height="238"></iframe>
+                                                            <p class="card-text"><br /></p>
+                                                            <p class="card-text"><br /></p>
+                                                            <h2 class="ql-align-center">Getting Started is Easy
+                                                            </h2>
+                                                            <p class="card-text"><br /></p>
+                                                            <p class="card-text"><br /></p>
+                                                            <p class="card-text"><br /></p>
+                                                            <p class="card-text ql-align-center"><strong>Built
+                                                with</strong></p>
+                                                            <p class="card-text ql-align-center">
+                                                                &nbsp;<span class="ql-formula" data-value="x^2 + (y - \sqrt[3]{x^2})^2 = 1"></span>&nbsp;
+                                                            </p>
+                                                            <p class="card-text"><br /></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Snow Editor end -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021<a
+                    class="ms-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span
+                    class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-end d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <!-- <script>
+        $('.click-to-show-btn').click(function() {
+            $(this).parent('li').find('.dropdown-menu-end').toggleClass('show');
+        });
+    </script> -->
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../../../app-assets/vendors/js/editors/quill/katex.min.js"></script>
+    <script src="../../../app-assets/vendors/js/editors/quill/highlight.min.js"></script>
+    <script src="../../../app-assets/vendors/js/editors/quill/quill.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../../../app-assets/js/core/app-menu.js"></script>
+    <script src="../../../app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../../app-assets/js/scripts/forms/form-quill-editor.js"></script>
+    <!-- END: Page JS-->
+
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+    <!-- BEGIN: Theme JS-->
+    <script src="../../../app-assets/js/core/app-menu.js"></script>
+    <script src="../../../app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <!-- END: Page JS-->
+
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+</body>
+<!-- END: Body-->
+
+</html>
