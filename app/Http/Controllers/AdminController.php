@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\Subcategory;
-use App\Models\Brand;
-use App\Models\Pricerange;
-use App\Models\User;
 use App\Models\Role;
+use App\Models\User;
+use App\Models\Brand;
+use App\Models\Category;
+use App\Models\Pricerange;
+use App\Models\Subcategory;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -318,6 +319,46 @@ class AdminController extends Controller
             'users' => $users ,
         ]);
     }
+
+    public function employeearch($id){
+        $user = User::find($id);
+        $user->status = 0;
+        $user->update();
+        return redirect()->back();
+
+    }
+
+    public function unemployeearch($id){
+        $user = User::find($id);
+        $user->status = 1;
+        $user->update();
+        return redirect()->back();
+    }
+
+    public function fetchemployees($id){
+       $user = User::find($id);
+       return response()->json([
+         'status'=> 200,
+         'users'=> $user,
+       ]);
+    }
+
+    public function addstaff(Request $request){
+        $user = new User;
+        $user->lname = $request->lname;
+        $user->fname = $request->fname;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+        $user->address = $request->address;
+        $user->role = $request->role;
+        $user->status = $request->status;
+        $user->password = Hash::make($request->password);
+        $user->save();
+        return response()->json([
+           'status' => 200,
+        ]);
+    }
+
 
 
 

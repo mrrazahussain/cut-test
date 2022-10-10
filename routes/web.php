@@ -53,3 +53,8 @@ Route::get('/usersdata',[AdminController::class,'usersdata']);
 
 Route::get('/display-users/{id}',[AdminController::class,'displayusers']);
 Route::get('/user-display/{id}',[AdminController::class, 'userdisplay']);
+
+Route::get('employeearch/{id}',[AdminController::class,'employeearch']);
+Route::get('unemployeearch/{id}',[AdminController::class,'unemployeearch']);
+Route::get('fetch-employees/{id}',[AdminController::class,'fetchemployees']);
+Route::post('add-staff',[AdminController::class,'addstaff']);
