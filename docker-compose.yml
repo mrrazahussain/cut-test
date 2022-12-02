@@ -1,0 +1,47 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: sammy
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: outcut
+    container_name: outcut-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - outcut
+  db:
+      image: mongo:5.0
+      container_name: mongo
+      environment:
+          - MONGO_INITDB_ROOT_USERNAME=
+          - MONGO_INITDB_ROOT_PASSWORD=
+      restart: unless-stopped
+      ports:
+          - "27018:27017"
+      volumes:
+          - ./database/mongodb/db:/data/db
+          - ./database/mongodb/dev.archive:/Databases/dev.archive
+          - ./database/mongodb/production:/Databases/production
+      networks:
+          - outcut
+  nginx:
+    image: nginx:alpine
+    container_name: outcut-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - outcut
+
+networks:
+  outcut:
+    driver: bridge
