@@ -39,11 +39,11 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'host' => '172.16.0.1',
-            'port' => '27017',
-            'database' => 'cutdb_dev',
-            'username' => '',
-            'password' => '',
+            'host' => env('DATABASE_URL','172.16.0.1'),
+            'port' => env('DB_PORT','27017'),
+            'database' => env('DB_DATABASE','cutdb'),
+            'username' => env('DB_USERNAME',''),
+            'password' => env('DB_PASSWORD',''),
             'options' => [
 
                 'database' => 'admin', // required with Mongo 3+
