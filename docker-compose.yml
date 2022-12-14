@@ -16,21 +16,21 @@ services:
     networks:
       - outcut
       - mongo_net
-  db:
-      image: mongo:5.0
-      container_name: mongo
-      environment:
-          - DB_USERNAME=
-          - DB_PASSWORD=
-      restart: unless-stopped
-      ports:
-          - "27017:27017"
-      volumes:
-          - ./database/mongodb/db:/data/db
-      networks:
-        mongo_net:
-          ipv4_address: 172.16.0.1
-      command: mongod --bind_ip 127.0.0.1,172.16.0.1
+#  db:
+#      image: mongo:5.0
+#      container_name: mongo
+#      environment:
+#          - DB_USERNAME=
+#          - DB_PASSWORD=
+#      restart: unless-stopped
+#      ports:
+#          - "27017:27017"
+#      volumes:
+#          - ./database/mongodb/db:/data/db
+#      networks:
+#        mongo_net:
+#          ipv4_address: 172.16.0.1
+#      command: mongod --bind_ip 127.0.0.1,172.16.0.1
   nginx:
     image: nginx:alpine
     container_name: outcut-nginx
