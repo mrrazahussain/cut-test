@@ -30,13 +30,13 @@ services:
       networks:
         mongo_net:
           ipv4_address: 172.16.0.1
-      command: mongod --bind_ip 127.0.0.1,172.16.0.1  
+      command: mongod --bind_ip 127.0.0.1,172.16.0.1
   nginx:
     image: nginx:alpine
     container_name: outcut-nginx
     restart: unless-stopped
     ports:
-      - 80:80
+      - 80:8080
     volumes:
       - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d/
